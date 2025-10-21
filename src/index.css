@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 217 33% 12%;
+    --foreground: 0 0% 98%;
+
+    --card: 217 30% 16%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 217 33% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 84% 44%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 28% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 217 25% 25%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 84% 44%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 217 25% 22%;
+    --input: 217 25% 22%;
+    --ring: 0 84% 44%;
+
+    --radius: 0.75rem;
+
+    /* F1 Racing Colors */
+    --racing-red: 0 84% 44%;
+    --racing-red-dark: 0 84% 35%;
+    --racing-red-light: 0 84% 55%;
+    --carbon-black: 217 33% 10%;
+    --metal-gray: 217 20% 30%;
+    --metal-gray-light: 217 18% 40%;
+    --neon-green: 142 76% 50%;
+    --neon-blue: 199 89% 48%;
+    --neon-yellow: 48 100% 50%;
+
+    /* Gradients */
+    --gradient-racing: linear-gradient(135deg, hsl(var(--racing-red)) 0%, hsl(var(--carbon-black)) 100%);
+    --gradient-speed: linear-gradient(90deg, hsl(var(--racing-red)) 0%, hsl(0 84% 55%) 50%, hsl(30 100% 50%) 100%);
+    --gradient-metal: linear-gradient(180deg, hsl(var(--metal-gray-light)) 0%, hsl(var(--carbon-black)) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(var(--racing-red) / 0.3) 0%, transparent 70%);
+
+    /* Shadows */
+    --shadow-racing: 0 10px 40px -10px hsl(var(--racing-red) / 0.5);
+    --shadow-glow: 0 0 30px hsl(var(--racing-red) / 0.4);
+    --shadow-neon: 0 0 20px hsl(var(--neon-green) / 0.6);
+
+    /* Animations */
+    --transition-speed: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease-out;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
